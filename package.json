@@ -1,0 +1,43 @@
+{
+  "name": "bau-reactcss",
+  "private": false,
+  "version": "0.1.0",
+  "description": "css-in-js for ReactJS",
+  "author": "Neven Drean",
+  "license": "BSD",
+  "homepage": "https://github.com/ndrean/bau-react-css",
+  "keywords": [
+    "React",
+    "css-in-js",
+    "css"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ndrean/bau-react-css"
+  },
+  "bugs": {
+    "url": "https://github.com/ndrean/bau-react-css/issues"
+  },
+  "type": "module",
+  "files": [
+    "./src/bau-reactcss.js",
+    ".src/bau-reactcss.d.ts"
+  ],
+  "types": "./src/bau-reactcss.d.ts",
+  "main": "bau-reactcss",
+  "module": "./src/bau-reactcss.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "badge-maker": "^3.3.1",
+    "badge-size": "^1.0.0",
+    "vite": "^4.3.9",
+    "vite-plugin-solid": "^2.7.0"
+  },
+  "peerdependencies": {
+    "react": "^18.2.0"
+  }
+}
