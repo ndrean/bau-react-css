@@ -2,7 +2,7 @@
   "name": "bau-reactcss",
   "private": false,
   "version": "0.1.0",
-  "description": "css-in-js for ReactJS",
+  "description": "CSS-in-JS for ReactJS",
   "author": "Neven Drean",
   "license": "BSD",
   "homepage": "https://github.com/ndrean/bau-react-css",
@@ -32,8 +32,6 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "badge-maker": "^3.3.1",
-    "badge-size": "^1.0.0",
     "vite": "^4.3.9",
     "vite-plugin-solid": "^2.7.0"
   },
