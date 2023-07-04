@@ -2,7 +2,7 @@
 
 This package is based on BauCSS and adds a `styled` component for React.
 
-[![npm bundle size](https://img.badgesize.io/ndrean/bau-react-css/main/src/bau-reactcss.js?compression=gzip)](https://bundlephobia.com/package/bau-reactcss@0.1.10)
+[![npm bundle size](https://img.badgesize.io/ndrean/bau-react-css/main/src/bau-reactcss.js?compression=gzip)](https://bundlephobia.com/package/bau-reactcss@0.1.2)
 
 ## Usage
 
