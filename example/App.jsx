@@ -108,15 +108,6 @@ const links = css`
   }
 `;
 
-const UL = (props) => styled("ul", props)`
-  font-weight: bold;
-  list-style-type: none;
-  > li:nth-of-type(1) {
-    background-color: bisque;
-    color: midnightblue;
-  }
-`;
-
 const Button = (props) => styled("button", props)`
   border-radius: 8px;
   border: 1px solid transparent;
@@ -136,6 +127,31 @@ const Button = (props) => styled("button", props)`
   }
   &:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
+  }
+`;
+
+// const chevron = `
+// &::marker {
+//   content: ">>";
+//   font-size: 1.2em;
+// `;
+
+// list-style-type: none;
+const UL = (props) => styled("ul", props)`
+  font-weight: bold;
+  list-style-type: none;
+  > li:nth-of-type(1) {
+    background-color: bisque;
+    color: green;
+  }
+`;
+
+const chevronCl = css`
+  > li:nth-of-type(2) {
+    &::marker {
+      content: ">>";
+      font-size: 1.2em;
+    }
   }
 `;
 
@@ -160,7 +176,7 @@ function App() {
           />
         </a>
       </div>
-      <UL>
+      <UL className={chevronCl}>
         <li>React</li>
         <li>Vite</li>
       </UL>
