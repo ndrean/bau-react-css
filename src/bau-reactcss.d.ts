@@ -1,4 +1,4 @@
-export default function BauSolidCss(input?: {
+export default function BauReactCss(input?: {
     document?: Document;
     target?: HTMLElement;
   }): {

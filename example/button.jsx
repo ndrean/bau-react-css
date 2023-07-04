@@ -1,4 +1,4 @@
-import BauReactCss from "../src/bau-reactcss";
+import BauReactCss from "bau-reactcss";
 
 const { styled, keyframes } = BauReactCss();
 
