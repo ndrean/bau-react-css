@@ -1,9 +1,9 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-import BauReactCss from "../src/bau-reactcss";
+// import BauReactCss from "../src/bau-reactcss";
+import BauReactCss from "bau-reactcss";
 import { Btn } from "./button";
-import "./App.css";
 
 const { css, styled, keyframes, createGlobalStyles } = BauReactCss();
 
