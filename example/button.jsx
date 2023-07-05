@@ -27,24 +27,6 @@ const styles = (props) => ({
     `,
 });
 
-const condStyles = (props) => ({
-  root: `
-      color: dodgerblue; 
-      cursor: pointer; 
-      font-size: ${props.size ?? 1}em; 
-      border-radius: 0.3em;
-      padding: 0.3em;
-    `,
-  danger: `
-    color: red;
-    animation: ${rescale} 1s ease infinite;
-  `,
-  disabled: `
-      pointer-events: none; 
-      opacity: ${props.opacity};
-    `,
-});
-
 const StBtn = (props) => styled("button", props)`
   ${styles(props).root +
   (props.danger ? styles(props).danger : "") +
@@ -52,8 +34,8 @@ const StBtn = (props) => styled("button", props)`
 `;
 
 const CondStBtn = (props) => styled("button", props)`
-  ${condStyles(props).root}
-  ${condStyles(props)}
+  ${styles(props).root}
+  ${styles(props)}
 `;
 
 const BasicBtn = (props) => {
@@ -61,7 +43,7 @@ const BasicBtn = (props) => {
   return (
     <button
       className={css`
-        ${condStyles(props).root}
+        ${styles(props).root}
       `}
       {...rest}
     >
