@@ -3,7 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 // import BauReactCss from "../src/bau-reactcss";
 import BauReactCss from "bau-reactcss";
-import { Btn } from "./button";
+import { BasicBtn, StBtn, CondStBtn } from "./button.jsx";
 
 const { css, styled, keyframes, createGlobalStyles } = BauReactCss();
 
@@ -195,13 +195,29 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <p>Conditional classes</p>
-      <Btn onClick={() => alert("hi")}>Base style</Btn>
-      <Btn danger="true" onClick={() => alert("danger")}>
-        Danger click
-      </Btn>
-      <Btn disabled size={1.5}>
-        Danger disabled
-      </Btn>
+      <BasicBtn onClick={() => alert("hi")}>Base style</BasicBtn>
+      <StBtn danger="true" onClick={() => alert("danger")}>
+        Conditional v1
+      </StBtn>
+      <CondStBtn
+        disabled
+        size={1.2}
+        className={css`
+          box-shadow: 6px -6px teal;
+        `}
+      >
+        Conditional v2
+      </CondStBtn>
+      <CondStBtn
+        className={css`
+          box-shadow: 6px -6px bisque;
+        `}
+        danger="true"
+        size={1.2}
+        onClick={() => alert(2)}
+      >
+        Conditional v2
+      </CondStBtn>
     </>
   );
 }
