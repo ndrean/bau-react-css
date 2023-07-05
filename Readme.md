@@ -111,7 +111,7 @@ const Btn = (props)=> styled('button', props)`
 `
 
 <Btn>Base button</Btn>
-<Btn danger={true} onClick={()=> alert('danger')}>Danger button</Btn>
+<Btn danger="true" onClick={()=> alert('danger')}>Danger button</Btn>
 ```
 
 To make life easier, the primitive `styled` can read the props and sets the class.
@@ -121,4 +121,15 @@ const Button = (props) => styled("button", props)`
   ${styles(props).base}
   ${styles(props)}
 `;
+
+<Button>Base Button</Button>
+<Button
+  danger="true"
+  className={css`
+    box-shadow: 6px -6px bisque;
+  `}
+>
+  {" "}
+  Shadowed Danger
+</Button>;
 ```
