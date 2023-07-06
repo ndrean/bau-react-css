@@ -116,7 +116,7 @@ const Btn = (props)=> styled('button', props)`
 <Btn danger="true" onClick={()=> alert('danger')}>Danger button</Btn>
 ```
 
-To make life easier, the primitive `styled` can read the props and sets the class.
+To make life easier, the primitive `styled` can read the props and sets the class when you use the styles object above:
 
 ```jsx
 const Button = (props) => styled("button", props)`
@@ -131,7 +131,6 @@ const Button = (props) => styled("button", props)`
     box-shadow: 6px -6px bisque;
   `}
 >
-  {" "}
   Shadowed Danger
 </Button>;
 ```
