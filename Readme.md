@@ -16,11 +16,22 @@ const { css, styled, keyframes, createGlobaStyles } = BauReactCss();
 
 <https://github.com/ndrean/bau-react-css/tree/main/example>
 
+## Create global styles
+
+```js
+createGlobalStyles`
+  :root {
+      margin: 0px;
+      --main-color: midnightblue;
+  }
+`;
+```
+
 ## Create a class
 
 ```jsx
 const blue = css`
-  color: midnightblue;
+  color: var(--main-color);
 `;
 
 <p className={blue}>A blue paragraph</p>;
@@ -30,7 +41,7 @@ You can create a component:
 
 ```jsx
 const colored = (props)=> css`
-  color: ${props.color};
+  color: ${props.color ?? "var(--main-color)"};
 `;
 
 const P = (props) => {
@@ -39,7 +50,8 @@ const P = (props) => {
 )
 }
 
-<P color="blue">A blue paragraph</P>
+<P>A blue paragraph</P>
+<P color="red">A red paragraph</P>
 ```
 
 ## Create a styled component
@@ -67,16 +79,6 @@ const red = css`
 `
 
 <p className={red}>Check this</p>
-```
-
-## Create global styles
-
-```js
-createGlobalStyles`
-  :root {
-      margin: 0px;
-  }
-`;
 ```
 
 ## Example of conditional classes
